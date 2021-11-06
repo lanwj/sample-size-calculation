@@ -1,18 +1,47 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <a-layout>
+    <a-layout-header>
+      <h1 class="page-title">选择功能</h1>
+    </a-layout-header>
+    <a-layout-content class="home-page-content">
+      <a-card title="两样本率比较的样本量估计" class="home-function-card">
+        <router-link slot="extra" :to="{ name: 'SampleRateCal' }">
+          查看详情
+        </router-link>
+        <SampleExpression />
+      </a-card>
+      <a-card title="合并样本组" class="home-function-card">
+        <router-link slot="extra" :to="{ name: 'SampleCombination' }">
+          查看详情
+        </router-link>
+        <CombinationExpression />
+      </a-card>
+    </a-layout-content>
+  </a-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import SampleExpression from "@/views/Sample/expression";
+import CombinationExpression from "@/views/Combination/expression";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    SampleExpression,
+    CombinationExpression,
   },
 };
 </script>
+<style type="text/css" scoped>
+.home-page-content {
+  padding: 50px;
+  overflow: hidden auto;
+}
+.home-function-card {
+  margin-bottom: 50px;
+}
+.home-function-card::v-deep .ant-card-body {
+  display: flex;
+  justify-content: center;
+}
+</style>

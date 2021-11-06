@@ -1,0 +1,19 @@
+body {
+    > .ant-layout {
+        height: 100%;
+    }
+}
+.page-title {
+    color: #ffffff;
+}
+
+.page-aside {
+    padding: 0 20px;
+    margin-right: 20px;
+    flex: 0 0 360px !important;
+    max-width: 360px !important;
+    min-width: 360px !important;
+    width: 360px !important;
+    background-color: transparent;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
