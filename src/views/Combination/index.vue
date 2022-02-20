@@ -1,7 +1,7 @@
 <template>
   <a-layout class="template-page">
     <a-layout-header>
-      <h1 class="page-title">样本组合并</h1>
+      <h1 class="page-title">合并样本组</h1>
     </a-layout-header>
     <a-layout>
       <a-layout-sider class="page-aside">
