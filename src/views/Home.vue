@@ -16,6 +16,12 @@
         </router-link>
         <CombinationExpression />
       </a-card>
+      <a-card title="合并PDF文件" class="home-function-card">
+        <router-link slot="extra" :to="{ name: 'MergePDF' }">
+          查看详情
+        </router-link>
+        <p>将多个PDF文件合并成一个</p>
+      </a-card>
     </a-layout-content>
   </a-layout>
 </template>
