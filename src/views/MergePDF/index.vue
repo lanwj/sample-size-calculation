@@ -68,9 +68,11 @@ export default {
       this.form.validateFields((err, values) => {
         if (!err) {
           this.isMerge = true;
-          const files = (values.fileList.fileList || []).map(
-            (item) => item.originFileObj
-          );
+          const tempFiles =
+            (values.fileList instanceof Array
+              ? values.fileList
+              : values.fileList.fileList) || [];
+          const files = tempFiles.map((item) => item.originFileObj);
           this.merge(files).finally(() => (this.isMerge = false));
         }
       });
